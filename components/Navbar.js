@@ -4,7 +4,7 @@ import { useContext } from "react";
 import AuthContext from "../stores/authContext";
 
 export default function Navbar() {
-  const { user, login } = useContext(AuthContext);
+  const { user, login, logout } = useContext(AuthContext);
   console.log("Koca: user ", user);
 
   return (
@@ -25,6 +25,9 @@ export default function Navbar() {
           </li>
           <li onClick={login} className="btn">
             Login/Signup
+          </li>
+          <li onClick={logout} className="btn">
+            Log Out
           </li>
         </ul>
       </nav>
